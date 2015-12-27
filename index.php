@@ -1,4 +1,5 @@
 <?php
+echo 123;
 // Version
 define('VERSION', '1.4.0.0');
 
