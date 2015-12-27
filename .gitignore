@@ -1,0 +1,12 @@
+# Windows：
+Thumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+
+# My configurations:
+db.ini
+_runtime/
+config.php
