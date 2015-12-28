@@ -10,3 +10,5 @@ Desktop.ini
 db.ini
 _runtime/
 config.php
+/system/storage/cache/
+/system/storage/logs/

@@ -67,3 +67,6 @@
 2016-03-13 16:32:56 - PHP Notice:  Undefined variable: text_press_category in C:\wamp\www\mycncart\catalog\view\theme\default\template\press\press.tpl on line 5
 2016-03-13 16:32:59 - PHP Notice:  Undefined variable: text_press_category in C:\wamp\www\mycncart\catalog\view\theme\default\template\press\all.tpl on line 5
 2016-03-13 16:40:51 - PHP Notice:  Undefined variable: text_faq_category in C:\wamp\www\mycncart\catalog\view\theme\default\template\faq\faq.tpl on line 5
+2015-12-28 0:19:37 - PHP Notice:  Undefined variable: text_press_category in /usr/share/nginx/html/huaye/catalog/view/theme/default/template/press/all.tpl on line 5
+2015-12-28 0:19:39 - PHP Notice:  Undefined variable: text_press_category in /usr/share/nginx/html/huaye/catalog/view/theme/default/template/press/press.tpl on line 5
+2015-12-28 0:19:42 - PHP Notice:  Undefined variable: text_press_category in /usr/share/nginx/html/huaye/catalog/view/theme/default/template/press/all.tpl on line 5
