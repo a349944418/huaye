@@ -101,6 +101,7 @@ div.required .control-label:before {
 /* search */
 #search {
 	margin-bottom: 10px;
+	margin-top:15px;
 }
 #search .input-lg {
 	height: 40px;
@@ -162,10 +163,9 @@ div.required .control-label:before {
 }
 /* menu */
 #menu {
-	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+	background-color: #273B5F;
 	background-repeat: repeat-x;
-	border-color: #1f90bb #1f90bb #145e7a;
+	border-color: #273B5F;
 	min-height: 40px;
 }
 #menu .nav > li > a {
