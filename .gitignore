@@ -1,4 +1,4 @@
-# Windows：
+﻿# Windows：
 Thumbs.db
 Desktop.ini
 
@@ -9,6 +9,6 @@ Desktop.ini
 # My configurations:
 db.ini
 _runtime/
-# config.php
+config.php
 /system/storage/cache/
 /system/storage/logs/
