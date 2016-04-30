@@ -5,6 +5,7 @@ Desktop.ini
 # Python:
 *.py[cod]
 *.so
+.DS_Store
 
 # My configurations:
 db.ini
