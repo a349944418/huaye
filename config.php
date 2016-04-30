@@ -6,18 +6,17 @@ define('HTTP_SERVER', 'http://huaye.app/');
 define('HTTPS_SERVER', 'http://huaye.app/');
 
 // DIR
-define('DIR_APPLICATION', '/usr/share/nginx/html/huaye/');
+define('DIR_APPLICATION', '/usr/share/nginx/html/huaye/catalog/');
 define('DIR_SYSTEM', '/usr/share/nginx/html/huaye/system/');
 define('DIR_IMAGE', '/usr/share/nginx/html/huaye/image/');
-define('DIR_LANGUAGE', '/usr/share/nginx/html/huaye/language/');
-define('DIR_TEMPLATE', '/usr/share/nginx/html/huaye/view/template/');
+define('DIR_LANGUAGE', '/usr/share/nginx/html/huaye/catalog/language/');
+define('DIR_TEMPLATE', '/usr/share/nginx/html/huaye/catalog/view/theme/');
 define('DIR_CONFIG', '/usr/share/nginx/html/huaye/system/config/');
 define('DIR_CACHE', '/usr/share/nginx/html/huaye/system/storage/cache/');
 define('DIR_DOWNLOAD', '/usr/share/nginx/html/huaye/system/storage/download/');
 define('DIR_LOGS', '/usr/share/nginx/html/huaye/system/storage/logs/');
 define('DIR_MODIFICATION', '/usr/share/nginx/html/huaye/system/storage/modification/');
-define('DIR_UPLOAD', '/usr/share/nginx/html/huaye/system/storage/upload/');
-define('DIR_CATALOG', '/usr/share/nginx/html/huaye/catalog/');
+define('DIR_UPLOAD', '/usr/share/nginx/html/huaye/system/storage/upload/')
 
 // DB
 define('DB_DRIVER', 'mysqli');
