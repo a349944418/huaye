@@ -37,9 +37,7 @@
 <?php } ?>
 </head>
 <body class="<?php echo $class; ?>">
-<nav id="top">
-</nav>
-<header>
+<header style="margin-top:10px">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -51,7 +49,7 @@
           <?php } ?>
         </div>
       </div>
-      <div class="col-sm-5"><?php echo $search; ?>
+      <div class="col-sm-offset-3 col-sm-5"><?php echo $search; ?>
       </div>
     </div>
   </div>
