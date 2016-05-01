@@ -40,11 +40,6 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_name; ?>"><?php echo $column_name; ?></a>
                     <?php } ?></td>
-                  <td class="text-left"><?php if ($sort == 'attribute_group') { ?>
-                    <a href="<?php echo $sort_attribute_group; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_attribute_group; ?></a>
-                    <?php } else { ?>
-                    <a href="<?php echo $sort_attribute_group; ?>"><?php echo $column_attribute_group; ?></a>
-                    <?php } ?></td>
                   <td class="text-right"><?php if ($sort == 'a.sort_order') { ?>
                     <a href="<?php echo $sort_sort_order; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_sort_order; ?></a>
                     <?php } else { ?>
@@ -63,7 +58,6 @@
                     <input type="checkbox" name="selected[]" value="<?php echo $attribute['attribute_id']; ?>" />
                     <?php } ?></td>
                   <td class="text-left"><?php echo $attribute['name']; ?></td>
-                  <td class="text-left"><?php echo $attribute['attribute_group']; ?></td>
                   <td class="text-right"><?php echo $attribute['sort_order']; ?></td>
                   <td class="text-right"><a href="<?php echo $attribute['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
