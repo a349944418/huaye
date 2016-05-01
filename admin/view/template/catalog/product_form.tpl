@@ -27,16 +27,16 @@
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
-            <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
+            <li><a href="#tab-data" style="display:none" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-links" data-toggle="tab"><?php echo $tab_links; ?></a></li>
             <li><a href="#tab-attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <li><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
-            <li><a href="#tab-recurring" data-toggle="tab"><?php echo $tab_recurring; ?></a></li>
-            <li><a href="#tab-discount" data-toggle="tab"><?php echo $tab_discount; ?></a></li>
-            <li><a href="#tab-special" data-toggle="tab"><?php echo $tab_special; ?></a></li>
+            <li><a href="#tab-option" style="display:none" data-toggle="tab"><?php echo $tab_option; ?></a></li>
+            <li><a href="#tab-recurring" style="display:none" data-toggle="tab"><?php echo $tab_recurring; ?></a></li>
+            <li><a href="#tab-discount" style="display:none" data-toggle="tab"><?php echo $tab_discount; ?></a></li>
+            <li><a href="#tab-special" style="display:none" data-toggle="tab"><?php echo $tab_special; ?></a></li>
             <li><a href="#tab-image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
-            <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
-            <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+            <li><a href="#tab-reward" style="display:none" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
+            <li><a href="#tab-design" style="display:none" data-toggle="tab"><?php echo $tab_design; ?></a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -54,6 +54,21 @@
                       <input type="text" name="product_description[<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['name'] : ''; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name<?php echo $language['language_id']; ?>" class="form-control" />
                       <?php if (isset($error_name[$language['language_id']])) { ?>
                       <div class="text-danger"><?php echo $error_name[$language['language_id']]; ?></div>
+                      <?php } ?>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-price"><?php echo $entry_price; ?></label>
+                    <div class="col-sm-10">
+                      <input type="text" name="price" value="<?php echo $price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group required">
+                    <label class="col-sm-2 control-label" for="input-model">面积</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="model" value="<?php echo $model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
+                      <?php if ($error_model) { ?>
+                      <div class="text-danger"><?php echo $error_model; ?></div>
                       <?php } ?>
                     </div>
                   </div>
@@ -95,15 +110,6 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-data">
-              <div class="form-group required">
-                <label class="col-sm-2 control-label" for="input-model"><?php echo $entry_model; ?></label>
-                <div class="col-sm-10">
-                  <input type="text" name="model" value="<?php echo $model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
-                  <?php if ($error_model) { ?>
-                  <div class="text-danger"><?php echo $error_model; ?></div>
-                  <?php } ?>
-                </div>
-              </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-sku"><span data-toggle="tooltip" title="<?php echo $help_sku; ?>"><?php echo $entry_sku; ?></span></label>
                 <div class="col-sm-10">
@@ -144,12 +150,6 @@
                 <label class="col-sm-2 control-label" for="input-location"><?php echo $entry_location; ?></label>
                 <div class="col-sm-10">
                   <input type="text" name="location" value="<?php echo $location; ?>" placeholder="<?php echo $entry_location; ?>" id="input-location" class="form-control" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-price"><?php echo $entry_price; ?></label>
-                <div class="col-sm-10">
-                  <input type="text" name="price" value="<?php echo $price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
                 </div>
               </div>
               <div class="form-group">
