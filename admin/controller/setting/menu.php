@@ -112,7 +112,8 @@ class ControllerSettingMenu extends Controller {
 			$page = 1;
 		}
 
-		$url = '';
+		$url = ''; 
+		$order = $sort = '';
 
 		$data['breadcrumbs'] = array();
 
@@ -141,7 +142,7 @@ class ControllerSettingMenu extends Controller {
 		$results = $this->model_setting_menu->getMenus($filter_data);
 
 		foreach ($results as $result) {
-			$data['menu'][] = array(
+			$data['menus'][] = array(
 				'menu_id' => $result['menu_id'],
 				'name'        => $result['name'],
 				'url'		  => $result['url'],

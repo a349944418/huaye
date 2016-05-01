@@ -43,19 +43,19 @@
                 </tr>
               </thead>
               <tbody>
-                <?php if ($categories) { ?>
-                <?php foreach ($categories as $category) { ?>
+                <?php if ($menus) { ?>
+                <?php foreach ($menus as $menu) { ?>
                 <tr>
-                  <td class="text-center"><?php if (in_array($category['category_id'], $selected)) { ?>
-                    <input type="checkbox" name="selected[]" value="<?php echo $category['category_id']; ?>" checked="checked" />
+                  <td class="text-center"><?php if (in_array($menu['menu_id'], $selected)) { ?>
+                    <input type="checkbox" name="selected[]" value="<?php echo $category['menu_id']; ?>" checked="checked" />
                     <?php } else { ?>
-                    <input type="checkbox" name="selected[]" value="<?php echo $category['category_id']; ?>" />
+                    <input type="checkbox" name="selected[]" value="<?php echo $menu['menu_id']; ?>" />
                     <?php } ?></td>
                   <td class="text-left"><?php echo $menu['menu_id']; ?></td>
                   <td class="text-left"><?php echo $menu['name']; ?></td>
                   <td class="text-left"><?php echo $menu['url']; ?></td>
                   <td class="text-right"><?php echo $menu['sort_order']; ?></td>
-                  <td class="text-right"><a href="<?php echo $category['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                  <td class="text-right"><a href="<?php echo $menu['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>
                 <?php } else { ?>
