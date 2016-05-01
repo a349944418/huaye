@@ -581,8 +581,7 @@ h2.price {
 	display: block;
 }
 .product-thumb .button-group {
-	border-top: 1px solid #ddd;
-	background-color: #eee;
+	margin-top:-67px;
 	overflow: auto;
 }
 .product-list .product-thumb .button-group {

@@ -64,7 +64,7 @@
               <tr id="image-row<?php echo $image_row; ?>">
                 <td class="text-left"><?php foreach ($languages as $language) { ?>
                   <div class="input-group pull-left"><span class="input-group-addon"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /> </span>
-                    <input type="text" name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][title]" value="<?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['title'] : ''; ?>123" placeholder="<?php echo $entry_title; ?>" class="form-control" />
+                    <input type="text" name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][title]" value="<?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['title'] : ''; ?>" placeholder="<?php echo $entry_title; ?>" class="form-control" />
                   </div>
                   <?php if (isset($error_banner_image[$image_row][$language['language_id']])) { ?>
                   <div class="text-danger"><?php echo $error_banner_image[$image_row][$language['language_id']]; ?></div>
