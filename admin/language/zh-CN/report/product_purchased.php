@@ -11,7 +11,7 @@ $_['text_all_status']   = '所有状态';
 $_['column_date_start'] = '开始日期';
 $_['column_date_end']   = '结束日期';
 $_['column_name']       = '商品名称';
-$_['column_model']      = '型号';
+$_['column_model']      = '面积';
 $_['column_quantity']   = '数量';
 $_['column_total']      = '总计';
 
