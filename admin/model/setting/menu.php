@@ -24,7 +24,7 @@ class ModelSettingMenu extends Model {
 
 	}
 
-	public function getMenu($category_id) {
+	public function getMenu($menu_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "menu WHERE menu_id = '" . (int)$menu_id . "'");
 
 		return $query->row;
