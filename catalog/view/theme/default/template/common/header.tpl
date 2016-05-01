@@ -67,7 +67,7 @@
         <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
           <div class="dropdown-menu">
             <div class="dropdown-inner">
-              <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+              <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / 2)) as $children) { ?>
               <ul class="list-unstyled">
                 <?php foreach ($children as $child) { ?>
                 <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
@@ -75,15 +75,12 @@
               </ul>
               <?php } ?>
             </div>
-            <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
+          </div>
         </li>
         <?php } else { ?>
         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
         <?php } ?>
         <?php } ?>
-        <li><a href="<?php echo $blog; ?>"><?php echo $text_blog; ?></a></li>
-        <li><a href="<?php echo $press; ?>"><?php echo $text_press; ?></a></li>
-        <li><a href="<?php echo $faq; ?>"><?php echo $text_faq; ?></a></li>
       </ul>
     </div>
   </nav>
