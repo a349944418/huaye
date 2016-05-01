@@ -27,29 +27,23 @@
       <hr>
       <?php } ?>
       <?php if ($categories) { ?>
-      <?php if (count($categories) <= 5) { ?>
-      <div class="row">
-        <div >
-          <ul>
-            <?php foreach ($categories as $category) { ?>
-            <li style="display:inline" class="col-sm-3"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-            <?php } ?>
-          </ul>
+        <?php if (count($categories) <= 5) { ?>
+        <div class="row" style="margin-bottom:20px">
+            <ul class="row">
+              <?php foreach ($categories as $category) { ?>
+              <li class="col-sm-3"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+              <?php } ?>
+            </ul>
         </div>
-      </div>
-      <?php } else { ?>
-      <div class="row">
-        <?php foreach (array_chunk($categories, ceil(count($categories) / 4)) as $categories) { ?>
-        <div >
-          <ul>
-            <?php foreach ($categories as $category) { ?>
-            <li style="display:inline" class="col-sm-3"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-            <?php } ?>
+        <?php } else { ?>
+        <div class="row" style="margin-bottom:20px">
+          <ul class="row">
+              <?php foreach ($categories as $category) { ?>
+              <li class="col-sm-3"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+              <?php } ?>
           </ul>
         </div>
         <?php } ?>
-      </div>
-      <?php } ?>
       <?php } ?>
       <?php if ($products) { ?>
       <div class="row">
