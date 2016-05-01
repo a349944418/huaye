@@ -31,7 +31,7 @@
           <div class="tab-content active">
             <div class="tab-pane active" id="tab-general">
               <div class="tab-content">
-                <div class="tab-pane" >
+                <div class="tab-pane active" >
                   <div class="form-group required">
                     <label class="col-sm-2 control-label" for="input-name">导航名</label>
                     <div class="col-sm-10">

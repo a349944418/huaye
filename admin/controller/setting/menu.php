@@ -331,12 +331,37 @@ class ControllerSettingMenu extends Controller {
 
 		$data['token'] = $this->session->data['token'];
 
+		if (isset($this->request->post['path'])) {
+			$data['path'] = $this->request->post['path'];
+		} elseif (!empty($category_info)) {
+			$query = $this->db->query('select name from ' . DB_PREFIX . 'menu where menu_id = '. $category_info['parent_id']);
+			$data['path'] = $query->row['path'];
+		} else {
+			$data['path'] = '';
+		}
+
 		if (isset($this->request->post['parent_id'])) {
 			$data['parent_id'] = $this->request->post['parent_id'];
 		} elseif (!empty($category_info)) {
 			$data['parent_id'] = $category_info['parent_id'];
 		} else {
 			$data['parent_id'] = 0;
+		}
+
+		if (isset($this->request->post['name'])) {
+			$data['name'] = $this->request->post['name'];
+		} elseif (!empty($category_info)) {
+			$data['name'] = $category_info['name'];
+		} else {
+			$data['name'] = '';
+		}
+
+		if (isset($this->request->post['url'])) {
+			$data['url'] = $this->request->post['url'];
+		} elseif (!empty($category_info)) {
+			$data['url'] = $category_info['url'];
+		} else {
+			$data['url'] = 0;
 		}
 
 		if (isset($this->request->post['sort_order'])) {
