@@ -593,7 +593,7 @@ h2.price {
 	}
 }
 .product-thumb .button-group button {
-	width: 60%;
+	width: 20%;
 	border: none;
 	display: inline-block;
 	float: left;
@@ -603,10 +603,6 @@ h2.price {
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-}
-.product-thumb .button-group button + button {
-	width: 20%;
-	border-left: 1px solid #ddd;
 }
 .product-thumb .button-group button:hover {
 	color: #444;
