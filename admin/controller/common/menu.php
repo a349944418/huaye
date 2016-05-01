@@ -180,6 +180,7 @@ class ControllerCommonMenu extends Controller {
 		$data['return_status'] = $this->url->link('localisation/return_status', 'token=' . $this->session->data['token'], true);
 		$data['shipping'] = $this->url->link('extension/shipping', 'token=' . $this->session->data['token'], true);
 		$data['setting'] = $this->url->link('setting/store', 'token=' . $this->session->data['token'], true);
+		$data['setting_menu'] = $this->url->link('setting/menu', 'token=' . $this->session->data['token'], true);
 		$data['sms'] = $this->url->link('extension/sms', 'token=' . $this->session->data['token'], true);
 		$data['stock_status'] = $this->url->link('localisation/stock_status', 'token=' . $this->session->data['token'], true);
 		$data['tax_class'] = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'], true);

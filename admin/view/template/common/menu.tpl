@@ -120,6 +120,7 @@
           <li style="display:none"><a href="<?php echo $api; ?>"><?php echo $text_api; ?></a></li>
         </ul>
       </li>
+      <li><a href="<?php echo $setting_menu; ?>">导航设置</a></li>
       <li><a class="parent" style="display:none"><?php echo $text_localisation; ?></a>
         <ul>
           <li><a href="<?php echo $location; ?>"><?php echo $text_location; ?></a></li>
