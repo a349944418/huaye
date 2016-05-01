@@ -47,7 +47,7 @@
                   <div class="form-group required">
                     <label class="col-sm-2 control-label" for="input-parent">上一级</label>
                     <div class="col-sm-10">
-                      <input type="text" name="path" value="<?php echo $path; ?>" placeholder="<?php echo $entry_parent; ?>" id="input-parent" class="form-control" />
+                      <input type="text" name="path" value="<?php echo $path; ?>" placeholder="上一级" id="input-parent" class="form-control" />
                       <input type="hidden" name="parent_id" value="<?php echo $parent_id; ?>" />
                     </div>
                   </div>
