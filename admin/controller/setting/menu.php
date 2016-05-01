@@ -82,8 +82,8 @@ class ControllerSettingMenu extends Controller {
 		$this->load->model('setting/menu');
 
 		if (isset($this->request->post['selected']) && $this->validateDelete()) {
-			foreach ($this->request->post['selected'] as $category_id) {
-				$this->model_catalog_category->deleteCategory($category_id);
+			foreach ($this->request->post['selected'] as $menu_id) {
+				$this->model_setting_menu->deleteMenu($menu_id);
 			}
 
 			$this->session->data['success'] = $this->language->get('text_success');
