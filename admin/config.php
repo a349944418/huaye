@@ -7,6 +7,7 @@ define('HTTP_CATALOG', 'http://huaye.app/');
 define('HTTPS_SERVER', 'http://huaye.app/admin/');
 define('HTTPS_CATALOG', 'http://huaye.app/');
 
+// DIR
 define('DIR_APPLICATION', '/usr/share/nginx/html/huaye/admin/');
 define('DIR_SYSTEM', '/usr/share/nginx/html/huaye/system/');
 define('DIR_IMAGE', '/usr/share/nginx/html/huaye/image/');

@@ -16,7 +16,7 @@ define('DIR_CACHE', '/usr/share/nginx/html/huaye/system/storage/cache/');
 define('DIR_DOWNLOAD', '/usr/share/nginx/html/huaye/system/storage/download/');
 define('DIR_LOGS', '/usr/share/nginx/html/huaye/system/storage/logs/');
 define('DIR_MODIFICATION', '/usr/share/nginx/html/huaye/system/storage/modification/');
-define('DIR_UPLOAD', '/usr/share/nginx/html/huaye/system/storage/upload/')
+define('DIR_UPLOAD', '/usr/share/nginx/html/huaye/system/storage/upload/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
