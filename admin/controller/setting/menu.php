@@ -330,7 +330,7 @@ class ControllerSettingMenu extends Controller {
 		$data['cancel'] = $this->url->link('setting/menu', 'token=' . $this->session->data['token'] . $url, true);
 
 		if (isset($this->request->get['menu_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
-			$category_info = $this->model_setting_menu->getCategory($this->request->get['menu_id']);
+			$category_info = $this->model_setting_menu->getMenu($this->request->get['menu_id']);
 		}
 
 		$data['token'] = $this->session->data['token'];
