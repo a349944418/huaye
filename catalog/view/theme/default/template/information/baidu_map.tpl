@@ -62,7 +62,7 @@
     }
     
     //标注点数组
-    var markerArr = [{title:"<?php echo $store_name; ?>",content:"<?php echo $store_address; ?>",point:"116.320116|40.074351",isOpen:0,icon:{w:20,h:47,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{title:"<?php echo $store_name; ?>",content:"<?php echo $store_address; ?>",point:"116.320116|40.074351",isOpen:0,icon:{w:20,h:21,l:0,t:0,x:6,lb:5}}
 		 ];
     //创建marker
     function addMarker(){
