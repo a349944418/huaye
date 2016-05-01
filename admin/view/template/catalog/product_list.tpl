@@ -54,22 +54,6 @@
             </div>
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
-                <select name="filter_status" id="input-status" class="form-control">
-                  <option value="*"></option>
-                  <?php if ($filter_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <?php } ?>
-                  <?php if (!$filter_status && !is_null($filter_status)) { ?>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
-                  <?php } else { ?>
-                  <option value="0"><?php echo $text_disabled; ?></option>
-                  <?php } ?>
-                </select>
-              </div>
-              <div class="form-group">
                 <label class="control-label" for="input-id"><?php echo $entry_product_id; ?></label>
                 <input type="text" name="filter_product_id" value="<?php echo $filter_product_id; ?>" placeholder="<?php echo $entry_product_id; ?>" id="input-id" class="form-control" />
               </div>

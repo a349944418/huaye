@@ -18,24 +18,24 @@ $_['text_percent']           = '百分比';
 $_['text_amount']            = '固定值';
 
 // Column
-$_['column_name']            = '商品名称';
+$_['column_name']            = '房源名称';
 $_['column_model']           = '面积';
 $_['column_image']           = '图像';
-$_['column_id']              = '商品ID';
+$_['column_id']              = '房源ID';
 $_['column_price']           = '价格';
 $_['column_quantity']        = '数量';
 $_['column_status']          = '状态';
 $_['column_action']          = '操作';
 
 // Entry
-$_['entry_name']             = '商品名称';
+$_['entry_name']             = '房源名称';
 $_['entry_description']      = '描述';
 $_['entry_meta_title'] 	     = 'Meta Tag 标题';
 $_['entry_meta_keyword'] 	 = 'Meta Tag 关键词';
 $_['entry_meta_description'] = 'Meta Tag 描述';
 $_['entry_keyword']          = 'SEO URL';
 $_['entry_model']            = '面积';
-$_['entry_product_id']  	 = '商品 ID';
+$_['entry_product_id']  	 = '房源ID';
 $_['entry_sku']              = 'SKU';
 $_['entry_upc']              = 'UPC';
 $_['entry_ean']              = 'EAN';

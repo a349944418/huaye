@@ -33,7 +33,7 @@
             <li><a href="#tab-option" style="display:none" data-toggle="tab"><?php echo $tab_option; ?></a></li>
             <li><a href="#tab-recurring" style="display:none" data-toggle="tab"><?php echo $tab_recurring; ?></a></li>
             <li><a href="#tab-discount" style="display:none" data-toggle="tab"><?php echo $tab_discount; ?></a></li>
-            <li><a href="#tab-special" style="display:none" data-toggle="tab"><?php echo $tab_special; ?></a></li>
+            <li><a href="#tab-special" data-toggle="tab"><?php echo $tab_special; ?></a></li>
             <li><a href="#tab-image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
             <li><a href="#tab-reward" style="display:none" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
             <li><a href="#tab-design" style="display:none" data-toggle="tab"><?php echo $tab_design; ?></a></li>
@@ -321,7 +321,7 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-links">
-              <div class="form-group">
+              <div class="form-group" style="display:none;">
                 <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="manufacturer" value="<?php echo $manufacturer ?>" placeholder="<?php echo $entry_manufacturer; ?>" id="input-manufacturer" class="form-control" />
@@ -341,7 +341,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group"  style="display:none;">
                 <label class="col-sm-2 control-label" for="input-filter"><span data-toggle="tooltip" title="<?php echo $help_filter; ?>"><?php echo $entry_filter; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="filter" value="" placeholder="<?php echo $entry_filter; ?>" id="input-filter" class="form-control" />
@@ -354,7 +354,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group"  style="display:none;">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
                 <div class="col-sm-10">
                   <div class="well well-sm" style="height: 150px; overflow: auto;">
@@ -398,7 +398,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group" style="display:none;">
                 <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="<?php echo $help_related; ?>"><?php echo $entry_related; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="related" value="" placeholder="<?php echo $entry_related; ?>" id="input-related" class="form-control" />
