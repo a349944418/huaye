@@ -33,6 +33,10 @@ class ModelSettingMenu extends Model {
 	public function getMenus($data = array()) {
 		$sql = "SELECT * FROM " . DB_PREFIX . "menu WHERE 1 = 1";
 
+		if (!empty($data['filter_name'])) {
+			$sql .= " AND name LIKE '" . $this->db->escape($data['filter_name']) . "%'";
+		}
+
 		$sql .= " GROUP BY menu_id";
 
 		$sort_data = array(

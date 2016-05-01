@@ -123,14 +123,14 @@ class ControllerSettingMenu extends Controller {
 		);
 
 		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('heading_title'),
+			'text' => '导航',
 			'href' => $this->url->link('setting/menu', 'token=' . $this->session->data['token'] . $url, true)
 		);
 
 		$data['add'] = $this->url->link('setting/menu/add', 'token=' . $this->session->data['token'] . $url, true);
 		$data['delete'] = $this->url->link('setting/menu/delete', 'token=' . $this->session->data['token'] . $url, true);
 
-		$data['menu'] = array();
+		$data['menus'] = array();
 
 		$filter_data = array(
 			'start' => ($page - 1) * $this->config->get('config_limit_admin'),
@@ -331,10 +331,6 @@ class ControllerSettingMenu extends Controller {
 
 		$data['token'] = $this->session->data['token'];
 
-		$this->load->model('localisation/language');
-
-		$data['languages'] = $this->model_localisation_language->getLanguages();
-
 		if (isset($this->request->post['parent_id'])) {
 			$data['parent_id'] = $this->request->post['parent_id'];
 		} elseif (!empty($category_info)) {
@@ -406,7 +402,7 @@ class ControllerSettingMenu extends Controller {
 		$json = array();
 
 		if (isset($this->request->get['filter_name'])) {
-			$this->load->model('catalog/category');
+			$this->load->model('setting/menu');
 
 			$filter_data = array(
 				'filter_name' => $this->request->get['filter_name'],
@@ -416,11 +412,11 @@ class ControllerSettingMenu extends Controller {
 				'limit'       => 5
 			);
 
-			$results = $this->model_catalog_category->getCategories($filter_data);
+			$results = $this->model_setting_menu->getMenus($filter_data);
 
 			foreach ($results as $result) {
 				$json[] = array(
-					'category_id' => $result['category_id'],
+					'menu_id' => $result['menu_id'],
 					'name'        => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8'))
 				);
 			}
