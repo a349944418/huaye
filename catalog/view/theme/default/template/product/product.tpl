@@ -35,33 +35,9 @@
           <?php } ?>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
-            <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <?php } ?>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
-            <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
-              <table class="table table-bordered">
-                <?php foreach ($attribute_groups as $attribute_group) { ?>
-                <thead>
-                  <tr>
-                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                  <tr>
-                    <td><?php echo $attribute['name']; ?></td>
-                    <td><?php echo $attribute['text']; ?></td>
-                  </tr>
-                  <?php } ?>
-                </tbody>
-                <?php } ?>
-              </table>
-            </div>
-            <?php } ?>
           </div>
         </div>
         <?php if ($column_left || $column_right) { ?>
@@ -72,7 +48,14 @@
         <div class="<?php echo $class; ?>">
           <h1><?php echo $heading_title; ?></h1>
           <ul class="list-unstyled">
-            <li>面积 <?php echo $model; ?></li>
+            <li>面积 <?php echo $model; ?>平方米</li>
+            <?php if ($attribute_groups) { ?>
+                <?php foreach ($attribute_groups as $attribute_group) { ?>
+                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                    <li><?php echo $attribute['name']; ?> <?php echo $attribute['text']; ?></li>                 
+                  <?php } ?>
+                <?php } ?>
+            <?php } ?>
           </ul>
           <?php if ($price) { ?>
           <ul class="list-unstyled">
