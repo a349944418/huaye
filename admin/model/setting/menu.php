@@ -1,7 +1,7 @@
 <?php
 class ModelSettingMenu extends Model {
 
-	public function addCategory($data) {
+	public function addMenu($data) {
 
 		$this->db->query("INSERT INTO " . DB_PREFIX . "menu SET parent_id = '" . (int)$data['parent_id'] . "', `name` = '" . $this->db->escape($data['name']) . "', `url` = '" . $this->db->escape($data['url']) . "', sort_order = '" . (int)$data['sort_order'] . "'");
 
@@ -10,13 +10,13 @@ class ModelSettingMenu extends Model {
 		return $menu_id;
 	}
 
-	public function editCategory($menu_id, $data) {
+	public function editMenu($menu_id, $data) {
 
 		$this->db->query("UPDATE " . DB_PREFIX . "menu SET parent_id = '" . (int)$data['parent_id'] . "', `name` = '" . $this->db->escape($data['name']) . "', `url` = '" . $this->db->escape($data['url']) . "', sort_order = '" . (int)$data['sort_order'] . "' WHERE menu_id = " . (int)$menu_id);
 
 	}
 
-	public function deleteCategory($menu_id) {
+	public function deleteMenu($menu_id) {
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "menu WHERE menu_id = '" . (int)$menu_id . "'");
 

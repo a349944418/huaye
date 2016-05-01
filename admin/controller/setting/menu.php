@@ -15,10 +15,12 @@ class ControllerSettingMenu extends Controller {
 
 		$this->document->setTitle('导航添加');
 
+		$data['heading_title'] = '导航设置';
+
 		$this->load->model('setting/menu');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_category->addCategory($this->request->post);
+			$this->model_setting_menu->addCategory($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -45,10 +47,12 @@ class ControllerSettingMenu extends Controller {
 	public function edit() {
 		$this->document->setTitle('导航设置');
 
+		$data['heading_title'] = '导航设置';
+
 		$this->load->model('setting/menu');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_category->editCategory($this->request->get['category_id'], $this->request->post);
+			$this->model_setting_menu->editMenu($this->request->get['category_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -361,7 +365,7 @@ class ControllerSettingMenu extends Controller {
 		} elseif (!empty($category_info)) {
 			$data['url'] = $category_info['url'];
 		} else {
-			$data['url'] = 0;
+			$data['url'] = '';
 		}
 
 		if (isset($this->request->post['sort_order'])) {
@@ -384,31 +388,13 @@ class ControllerSettingMenu extends Controller {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
-		foreach ($this->request->post['category_description'] as $language_id => $value) {
-			if ((utf8_strlen($value['name']) < 1) || (utf8_strlen($value['name']) > 255)) {
-				$this->error['name'][$language_id] = $this->language->get('error_name');
-			}
-
-			if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
-				$this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
-			}
+		if ((utf8_strlen($this->request->post['name']) < 1) || (utf8_strlen($this->request->post['name']) > 255)) {
+			$this->error['name'] = '名称错误';
 		}
 
-		if (utf8_strlen($this->request->post['keyword']) > 0) {
-			$this->load->model('catalog/url_alias');
-
-			$url_alias_info = $this->model_catalog_url_alias->getUrlAlias($this->request->post['keyword']);
-
-			if ($url_alias_info && isset($this->request->get['category_id']) && $url_alias_info['query'] != 'category_id=' . $this->request->get['category_id']) {
-				$this->error['keyword'] = sprintf($this->language->get('error_keyword'));
-			}
-
-			if ($url_alias_info && !isset($this->request->get['category_id'])) {
-				$this->error['keyword'] = sprintf($this->language->get('error_keyword'));
-			}
-
-			if ($this->error && !isset($this->error['warning'])) {
-				$this->error['warning'] = $this->language->get('error_warning');
+		if ((!isset($this->request->post['url']))) {
+			if($this->request->post['url'] < 1 || $this->request->post['url'] > 255) {
+				$this->error['url'] = 'url错误';
 			}
 		}
 
