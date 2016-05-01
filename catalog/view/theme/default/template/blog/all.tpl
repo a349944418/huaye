@@ -50,7 +50,7 @@
           
           <?php if($cms_blog_category_page_show_image) { ?>
             <?php if ($blog['thumb']) { ?>
-            <div><img src="<?php echo $blog['thumb']; ?>" alt="<?php echo $blog['title']; ?>" title="<?php echo $blog['title']; ?>" class="img-thumbnail" /></div>
+            <div><img src="<?php echo $blog['thumb']; ?>" alt="<?php echo $blog['title']; ?>" title="<?php echo $blog['title']; ?>" /></div>
             <?php } ?>
           <?php } ?>
           
