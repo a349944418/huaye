@@ -52,7 +52,7 @@ class ControllerSettingMenu extends Controller {
 		$this->load->model('setting/menu');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_setting_menu->editMenu($this->request->get['category_id'], $this->request->post);
+			$this->model_setting_menu->editMenu($this->request->get['menu_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
