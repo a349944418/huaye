@@ -1,5 +1,5 @@
 <?php
-class ModelCatalogCategory extends Model {
+class ModelSettingMenu extends Model {
 
 	public function addCategory($data) {
 

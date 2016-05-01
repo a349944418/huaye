@@ -132,8 +132,6 @@ class ControllerSettingMenu extends Controller {
 		$data['menu'] = array();
 
 		$filter_data = array(
-			'sort'  => $sort,
-			'order' => $order,
 			'start' => ($page - 1) * $this->config->get('config_limit_admin'),
 			'limit' => $this->config->get('config_limit_admin')
 		);
