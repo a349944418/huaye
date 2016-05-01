@@ -96,17 +96,19 @@ class ControllerCommonHeader extends Controller {
 
 		$this->load->model('catalog/product');
 
+		$this->load->model('catalog/menu');
+
 		$data['categories'] = array();
 
-		$categories = $this->model_catalog_category->getCategories(0);
+		$categories = $this->model_catalog_menu->getMenus(0);
 
 		foreach ($categories as $category) {
-			if ($category['top']) {
-				// Level 2
-				$children_data = array();
+			// Level 2
+			$children_data = array();
 
-				$children = $this->model_catalog_category->getCategories($category['category_id']);
+			$children = $this->model_catalog_menu->getMenus($category['menu_id']);
 
+			if ($children) {
 				foreach ($children as $child) {
 					$filter_data = array(
 						'filter_category_id'  => $child['category_id'],
@@ -114,19 +116,18 @@ class ControllerCommonHeader extends Controller {
 					);
 
 					$children_data[] = array(
-						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+						'name'  => $child['name'],
+						'href'  => $this->url->link($child['url'])
 					);
 				}
-
-				// Level 1
-				$data['categories'][] = array(
-					'name'     => $category['name'],
-					'children' => $children_data,
-					'column'   => $category['column'] ? $category['column'] : 1,
-					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
-				);
 			}
+
+			// Level 1
+			$data['categories'][] = array(
+				'name'     => $category['name'],
+				'children' => $children_data,
+				'href'     => $this->url->link($category['url'])
+			);
 		}
 
 		//$data['language'] = $this->load->controller('common/language');
