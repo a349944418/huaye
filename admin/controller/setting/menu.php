@@ -20,7 +20,7 @@ class ControllerSettingMenu extends Controller {
 		$this->load->model('setting/menu');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_setting_menu->addCategory($this->request->post);
+			$this->model_setting_menu->addMenu($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
