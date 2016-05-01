@@ -338,8 +338,12 @@ class ControllerSettingMenu extends Controller {
 		if (isset($this->request->post['path'])) {
 			$data['path'] = $this->request->post['path'];
 		} elseif (!empty($category_info)) {
-			$query = $this->db->query('select name from ' . DB_PREFIX . 'menu where menu_id = '. $category_info['parent_id']);
-			$data['path'] = $query->row['path'];
+			if($category_info['parent_id']) {
+				$query = $this->db->query('select name from ' . DB_PREFIX . 'menu where menu_id = '. $category_info['parent_id']);
+				$data['path'] = $query->row['name'];
+			} else {
+				$data['path'] = '';
+			}			
 		} else {
 			$data['path'] = '';
 		}
