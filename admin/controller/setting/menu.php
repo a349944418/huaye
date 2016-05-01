@@ -323,7 +323,7 @@ class ControllerSettingMenu extends Controller {
 			'href' => $this->url->link('setting/menu', 'token=' . $this->session->data['token'] . $url, true)
 		);
 
-		if (!isset($this->request->get['category_id'])) {
+		if (!isset($this->request->get['menu_id'])) {
 			$data['action'] = $this->url->link('setting/menu/add', 'token=' . $this->session->data['token'] . $url, true);
 		} else {
 			$data['action'] = $this->url->link('setting/menu/edit', 'token=' . $this->session->data['token'] . '&menu_id=' . $this->request->get['menu_id'] . $url, true);
