@@ -47,10 +47,6 @@
                 <label class="control-label" for="input-price"><?php echo $entry_price; ?></label>
                 <input type="text" name="filter_price" value="<?php echo $filter_price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
               </div>
-              <div class="form-group">
-                <label class="control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
-                <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
-              </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">

@@ -5,19 +5,19 @@
       <li><a href="<?php echo $category; ?>"><?php echo $text_category; ?></a></li>
       <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
       <li style="display:none"><a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></li>
-      <li><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
+      <li style="display:none"><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
       <li><a class="parent"><?php echo $text_attribute; ?></a>
         <ul>
           <li><a href="<?php echo $attribute; ?>"><?php echo $text_attribute; ?></a></li>
           <li><a href="<?php echo $attribute_group; ?>"><?php echo $text_attribute_group; ?></a></li>
         </ul>
       </li>
-      <li><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
-      <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-      <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+      <li style="display:none"><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
+      <li style="display:none"><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+      <li style="display:none"><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
       <li style="display:none"><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
       <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
-      <li><a href="<?php echo $url_alias; ?>"><?php echo $text_url_alias; ?></a></li>
+      <li style="display:none"><a href="<?php echo $url_alias; ?>"><?php echo $text_url_alias; ?></a></li>
     </ul>
   </li>
   <li id="extension" style="display:none"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>
