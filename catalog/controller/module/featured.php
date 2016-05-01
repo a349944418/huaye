@@ -18,7 +18,7 @@ class ControllerModuleFeatured extends Controller {
 		$data['products'] = array();
 
 		if (!$setting['limit']) {
-			$setting['limit'] = 4;
+			$setting['limit'] = 8;
 		}
 
 		if (!empty($setting['product'])) {
