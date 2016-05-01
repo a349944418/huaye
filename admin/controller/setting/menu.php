@@ -6,6 +6,8 @@ class ControllerSettingMenu extends Controller {
 
 		$this->document->setTitle('导航设置');
 
+		$data['heading_title'] = '导航设置';
+
 		$this->load->model('setting/menu');
 
 		$this->getList();
