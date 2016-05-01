@@ -248,6 +248,7 @@ class ControllerBlogAll extends Controller {
 		$data['continue'] = $this->url->link('blog/all');
 		
 		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['column_right'] = '';
 		//$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
