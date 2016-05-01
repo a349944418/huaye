@@ -28,7 +28,7 @@
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab">常规</a></li>
           </ul>
-          <div class="tab-content">
+          <div class="tab-content active">
             <div class="tab-pane active" id="tab-general">
               <div class="tab-content">
                 <div class="tab-pane" >
