@@ -5,10 +5,14 @@ Desktop.ini
 # Python:
 *.py[cod]
 *.so
+.DS_Store
 
 # My configurations:
 db.ini
 _runtime/
-config.php
+/config.php
+/admin/config.php
 /system/storage/cache/
 /system/storage/logs/
+config.php.bak
+/image/cache/

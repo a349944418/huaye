@@ -20,7 +20,7 @@
       <li><a href="<?php echo $url_alias; ?>"><?php echo $text_url_alias; ?></a></li>
     </ul>
   </li>
-  <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>
+  <li id="extension" style="display:none"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>
     <ul>
       <li><a href="<?php echo $installer; ?>"><?php echo $text_installer; ?></a></li>
       <li><a href="<?php echo $modification; ?>"><?php echo $text_modification; ?></a></li>
@@ -68,11 +68,11 @@
   </li>
   <li id="design"><a class="parent"><i class="fa fa-television fa-fw"></i> <span><?php echo $text_design; ?></span></a>
     <ul>
-      <li><a href="<?php echo $layout; ?>"><?php echo $text_layout; ?></a></li>
+      <li style="display:none"><a href="<?php echo $layout; ?>"><?php echo $text_layout; ?></a></li>
       <li><a href="<?php echo $banner; ?>"><?php echo $text_banner; ?></a></li>
     </ul>
   </li>
-  <li id="sale"><a class="parent"><i class="fa fa-shopping-cart fa-fw"></i> <span><?php echo $text_sale; ?></span></a>
+  <li id="sale" style="display:none"><a class="parent"><i class="fa fa-shopping-cart fa-fw"></i> <span><?php echo $text_sale; ?></span></a>
     <ul>
       <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
       <li><a href="<?php echo $order_recurring; ?>"><?php echo $text_order_recurring; ?></a></li>
@@ -90,14 +90,14 @@
       </li>
     </ul>
   </li>
-  <li id="customer"><a class="parent"><i class="fa fa-user fa-fw"></i> <span><?php echo $text_customer; ?></span></a>
+  <li id="customer" style="display:none"><a class="parent"><i class="fa fa-user fa-fw"></i> <span><?php echo $text_customer; ?></span></a>
     <ul>
       <li><a href="<?php echo $customer; ?>"><?php echo $text_customer; ?></a></li>
       <li><a href="<?php echo $customer_group; ?>"><?php echo $text_customer_group; ?></a></li>
       <li><a href="<?php echo $custom_field; ?>"><?php echo $text_custom_field; ?></a></li>
     </ul>
   </li>
-  <li><a class="parent"><i class="fa fa-share-alt fa-fw"></i> <span><?php echo $text_marketing; ?></span></a>
+  <li style="display:none"><a class="parent"><i class="fa fa-share-alt fa-fw"></i> <span><?php echo $text_marketing; ?></span></a>
     <ul>
       <li><a href="<?php echo $marketing; ?>"><?php echo $text_marketing; ?></a></li>
       <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
@@ -105,7 +105,7 @@
       <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
     </ul>
   </li>
-  <li><a class="parent"><i class="fa fa-search fa-fw"></i> <span><?php echo $text_baidu_seo; ?></span></a>
+  <li style="display:none"><a class="parent"><i class="fa fa-search fa-fw"></i> <span><?php echo $text_baidu_seo; ?></span></a>
     <ul>
       <li><a href="<?php echo $pushurl; ?>"><?php echo $text_pushurl; ?></a></li>
     </ul>
@@ -157,7 +157,7 @@
       </li>
     </ul>
   </li>
-  <li id="reports"><a class="parent"><i class="fa fa-bar-chart-o fa-fw"></i> <span><?php echo $text_reports; ?></span></a>
+  <li id="reports" style="display:none"><a class="parent"><i class="fa fa-bar-chart-o fa-fw"></i> <span><?php echo $text_reports; ?></span></a>
     <ul>
       <li><a class="parent"><?php echo $text_sale; ?></a>
         <ul>
@@ -192,7 +192,7 @@
       </li>
     </ul>
   </li>
-  <li id="thirdparty"><a class="parent"><i class="fa fa-university"></i> <span><?php echo $text_thirdparty; ?></span></a>
+  <li id="thirdparty" style="display:none"><a class="parent"><i class="fa fa-university"></i> <span><?php echo $text_thirdparty; ?></span></a>
     <ul>
       <li><a class="parent"><?php echo $text_weidian; ?></a>
         <ul>
@@ -208,6 +208,6 @@
     </ul>
   </li>
   
-  <li id="others"><a class="parent"><i class="fa fa-key fa-fw"></i> <span><?php echo $text_others; ?></span></a>
+  <li id="others" style="display:none"><a class="parent"><i class="fa fa-key fa-fw"></i> <span><?php echo $text_others; ?></span></a>
   </li>
 </ul>
