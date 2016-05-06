@@ -110,6 +110,19 @@ class ControllerCommonHeader extends Controller {
 
 			if ($children) {
 				foreach ($children as $child) {
+					$c_data = array();
+					$c_value =  $this->model_catalog_menu->getMenus($child['menu_id']);
+
+					if($c_value) {
+						$child['children'] = $c_value;
+						foreach ($c_value as $c_v) {
+							$c_data[] = array(
+								'name' => $c_v['name'],
+								'href' => $this->url->link($c_v['url'])
+							)
+						}
+					}
+
 					$filter_data = array(
 						'filter_category_id'  => $child['menu_id'],
 						'filter_sub_category' => true
@@ -117,7 +130,8 @@ class ControllerCommonHeader extends Controller {
 
 					$children_data[] = array(
 						'name'  => $child['name'],
-						'href'  => $this->url->link($child['url'])
+						'href'  => $this->url->link($child['url']),
+						'children' => $c_data
 					);
 				}
 			}
@@ -130,7 +144,7 @@ class ControllerCommonHeader extends Controller {
 			);
 		}
 		echo '<pre>';
-		var_dump($categories);
+		var_dump($date['categories']);
 
 		//$data['language'] = $this->load->controller('common/language');
 		//$data['currency'] = $this->load->controller('common/currency');
