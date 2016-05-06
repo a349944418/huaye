@@ -243,7 +243,7 @@ div.required .control-label:before {
 	#menu .dropdown:hover .dropdown-menu {
 		display: block;
 	}
-	#menu .dropdown:hover .dropdown-menu.dropdown-submenu .dropdown {
+	#menu .dropdown:hover .dropdown-menu .dropdown-submenu .dropdown {
 		display: none;
 	}
 	#menu .dropdown .dropdown-menu .dropdown-submenu:hover .dropdown {
