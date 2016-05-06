@@ -68,7 +68,7 @@
           <?php if ($category['children']) { ?>
             <li class="dropdown">
               <a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">
-                <?php echo $category['name']; ?>
+                <?php echo $category['name']; ?><span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <?php foreach ($category['children'] as $child) { ?>
