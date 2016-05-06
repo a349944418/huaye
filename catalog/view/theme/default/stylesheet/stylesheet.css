@@ -239,7 +239,18 @@ div.required .control-label:before {
 	color: #ffffff;
 	background-color: #229ac8;
 }
+@media (min-width: 768px) {
+	#menu .dropdown:hover .dropdown-menu {
+		display: block;
+	}
+	#menu .dropdown .dropdown-menu .dropdown-submenu .dropdown1 {
+		display: none;
+	}
+	#menu .dropdown .dropdown-menu .dropdown-submenu:hover .dropdown1 {
+		display: block;
+	}
 
+}
 @media (max-width: 767px) {
 	#menu {
 		border-radius: 4px;

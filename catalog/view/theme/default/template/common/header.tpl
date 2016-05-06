@@ -77,7 +77,7 @@
                       <a href="<?php echo $child['href']; ?>">
                         <?php echo $child['name']; ?>
                       </a>
-                      <ul class="dropdown-menu">
+                      <ul class="dropdown-menu1">
                         <?php foreach ($child['children'] as $c) { ?>
                           <li><a href="<?php echo $c['href']; ?>"><?php echo $c['name']; ?></a></li>
                         <?php } ?>
