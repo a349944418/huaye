@@ -129,6 +129,7 @@ class ControllerCommonHeader extends Controller {
 				'href'     => $this->url->link($category['url'])
 			);
 		}
+		var_dump($categories);
 
 		//$data['language'] = $this->load->controller('common/language');
 		//$data['currency'] = $this->load->controller('common/currency');
