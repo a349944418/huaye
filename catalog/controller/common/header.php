@@ -114,12 +114,12 @@ class ControllerCommonHeader extends Controller {
 					$c_value =  $this->model_catalog_menu->getMenus($child['menu_id']);
 
 					if($c_value) {
-						$child['children'] = $c_value;
+						//$child['children'] = $c_value;
 						foreach ($c_value as $c_v) {
 							$c_data[] = array(
 								'name' => $c_v['name'],
 								'href' => $this->url->link($c_v['url'])
-							)
+							);
 						}
 					}
 
