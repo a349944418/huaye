@@ -58,6 +58,170 @@
 </header>
 <?php if ($categories) { ?>
 <div class="container">
+  <nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand">Project Name</a>
+  </div>
+
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a tabindex="0" data-toggle="dropdown" data-submenu="" aria-expanded="false">
+          Dropdown<span class="caret"></span>
+        </a>
+
+        <ul class="dropdown-menu">
+  <li class="dropdown-submenu">
+  <a tabindex="0">Action</a>
+
+  <ul class="dropdown-menu">
+    <li><a tabindex="0">Sub action</a></li>
+    <li class="dropdown-submenu">
+      <a tabindex="0">Another sub action</a>
+
+      <ul class="dropdown-menu">
+        <li><a tabindex="0">Sub action</a></li>
+        <li><a tabindex="0">Another sub action</a></li>
+        <li><a tabindex="0">Something else here</a></li>
+      </ul>
+    </li>
+    <li><a tabindex="0">Something else here</a></li>
+    <li class="disabled"><a tabindex="-1">Disabled action</a></li>
+    <li class="dropdown-submenu">
+      <a tabindex="0">Another action</a>
+
+      <ul class="dropdown-menu">
+        <li><a tabindex="0">Sub action</a></li>
+        <li><a tabindex="0">Another sub action</a></li>
+        <li><a tabindex="0">Something else here</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li class="dropdown-header">Dropdown header</li>
+<li class="dropdown-submenu">
+  <a tabindex="0">Another action</a>
+
+  <ul class="dropdown-menu">
+    <li><a tabindex="0">Sub action</a></li>
+    <li><a tabindex="0">Another sub action</a></li>
+    <li><a tabindex="0">Something else here</a></li>
+  </ul>
+</li>
+<li><a tabindex="0">Something else here</a></li>
+<li class="divider"></li>
+<li><a tabindex="0">Separated link</a></li>
+</ul>
+      </li>
+      <li class="dropdown">
+        <a tabindex="0" data-toggle="dropdown" data-submenu="" aria-expanded="false">
+          Dropdown 2<span class="caret"></span>
+        </a>
+
+        <ul class="dropdown-menu">
+  <li class="dropdown-submenu">
+  <a tabindex="0">Action</a>
+
+  <ul class="dropdown-menu">
+    <li><a tabindex="0">Sub action</a></li>
+    <li class="dropdown-submenu">
+      <a tabindex="0">Another sub action</a>
+
+      <ul class="dropdown-menu">
+        <li><a tabindex="0">Sub action</a></li>
+        <li><a tabindex="0">Another sub action</a></li>
+        <li><a tabindex="0">Something else here</a></li>
+      </ul>
+    </li>
+    <li><a tabindex="0">Something else here</a></li>
+    <li class="disabled"><a tabindex="-1">Disabled action</a></li>
+    <li class="dropdown-submenu">
+      <a tabindex="0">Another action</a>
+
+      <ul class="dropdown-menu">
+        <li><a tabindex="0">Sub action</a></li>
+        <li><a tabindex="0">Another sub action</a></li>
+        <li><a tabindex="0">Something else here</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li class="dropdown-header">Dropdown header</li>
+<li class="dropdown-submenu">
+  <a tabindex="0">Another action</a>
+
+  <ul class="dropdown-menu">
+    <li><a tabindex="0">Sub action</a></li>
+    <li><a tabindex="0">Another sub action</a></li>
+    <li><a tabindex="0">Something else here</a></li>
+  </ul>
+</li>
+<li><a tabindex="0">Something else here</a></li>
+<li class="divider"></li>
+<li><a tabindex="0">Separated link</a></li>
+</ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a tabindex="0" data-toggle="dropdown" data-submenu="">
+          Dropdown 3<span class="caret"></span>
+        </a>
+
+        <ul class="dropdown-menu">
+  <li class="dropdown-submenu">
+  <a tabindex="0">Action</a>
+
+  <ul class="dropdown-menu">
+    <li><a tabindex="0">Sub action</a></li>
+    <li class="dropdown-submenu">
+      <a tabindex="0">Another sub action</a>
+
+      <ul class="dropdown-menu">
+        <li><a tabindex="0">Sub action</a></li>
+        <li><a tabindex="0">Another sub action</a></li>
+        <li><a tabindex="0">Something else here</a></li>
+      </ul>
+    </li>
+    <li><a tabindex="0">Something else here</a></li>
+    <li class="disabled"><a tabindex="-1">Disabled action</a></li>
+    <li class="dropdown-submenu">
+      <a tabindex="0">Another action</a>
+
+      <ul class="dropdown-menu">
+        <li><a tabindex="0">Sub action</a></li>
+        <li><a tabindex="0">Another sub action</a></li>
+        <li><a tabindex="0">Something else here</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li class="dropdown-header">Dropdown header</li>
+<li class="dropdown-submenu">
+  <a tabindex="0">Another action</a>
+
+  <ul class="dropdown-menu">
+    <li><a tabindex="0">Sub action</a></li>
+    <li><a tabindex="0">Another sub action</a></li>
+    <li><a tabindex="0">Something else here</a></li>
+  </ul>
+</li>
+<li><a tabindex="0">Something else here</a></li>
+<li class="divider"></li>
+<li><a tabindex="0">Separated link</a></li>
+</ul>
+      </li>
+    </ul>
+  </div>
+</nav>
   <nav id="menu" class="navbar">
     <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
       <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
