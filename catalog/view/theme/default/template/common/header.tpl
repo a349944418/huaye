@@ -74,7 +74,7 @@
                 <?php foreach ($category['children'] as $child) { ?>
                   <?php if ($child['children']) { ?>
                     <li class="dropdown-submenu">
-                      <a href="<?php echo $child['href']; ?>" style="color:white">
+                      <a tabindex="0">
                         <?php echo $child['name']; ?>
                       </a>
                       <ul class="dropdown-menu">

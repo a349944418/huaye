@@ -280,6 +280,9 @@ div.required .control-label:before {
 		border-radius: 0;
 		color: #fff;
 	}
+	.navbar-nav .open .dropdown-menu>li>a {
+		color:#fff;
+	}
 }
 /* content */
 #content {
