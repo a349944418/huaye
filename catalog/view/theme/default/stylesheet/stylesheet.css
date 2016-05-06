@@ -282,6 +282,7 @@ div.required .control-label:before {
 	}
 	.navbar-nav .open .dropdown-menu>li>a {
 		color:#fff;
+		font-size: 12px;
 	}
 }
 /* content */
