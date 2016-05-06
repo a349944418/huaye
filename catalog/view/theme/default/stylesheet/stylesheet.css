@@ -285,6 +285,9 @@ div.required .control-label:before {
 		font-size: 12px;
 	}
 }
+.navbar-nav .dropdown-menu>li>a {
+	font-size: 12px;
+}
 /* content */
 #content {
 	min-height: 600px;
