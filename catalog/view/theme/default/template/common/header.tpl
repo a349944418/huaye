@@ -19,7 +19,7 @@
 <?php } ?>
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="http://vsn4ik.github.io/bootstrap-submenu/vendor/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
 <link href="catalog/view/javascript/bootstrap-submenu.min.css" rel="stylesheet">
@@ -37,6 +37,7 @@
 <?php foreach ($analytics as $analytic) { ?>
 <?php echo $analytic; ?>
 <?php } ?>
+<script type="text/javascript">$('[data-submenu]').submenupicker();</script>
 </head>
 <body class="<?php echo $class; ?>">
 <header >
