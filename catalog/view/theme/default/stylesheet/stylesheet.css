@@ -243,10 +243,10 @@ div.required .control-label:before {
 	#menu .dropdown:hover .dropdown-menu {
 		display: block;
 	}
-	#menu .dropdown .dropdown-menu .dropdown-submenu .dropdown1 {
+	#menu .dropdown:hover .dropdown-menu.dropdown-submenu .dropdown {
 		display: none;
 	}
-	#menu .dropdown .dropdown-menu .dropdown-submenu:hover .dropdown1 {
+	#menu .dropdown .dropdown-menu .dropdown-submenu:hover .dropdown {
 		display: block;
 	}
 
