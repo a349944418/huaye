@@ -145,6 +145,7 @@ class ControllerCommonHeader extends Controller {
 		}
 		echo '<pre>';
 		var_dump($data['categories']);
+		echo '</pre>';
 
 		//$data['language'] = $this->load->controller('common/language');
 		//$data['currency'] = $this->load->controller('common/currency');
