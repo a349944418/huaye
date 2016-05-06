@@ -22,6 +22,8 @@
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="catalog/view/javascript/bootstrap-submenu.min.css" rel="stylesheet">
+<script src="catalog/view/javascript/bootstrap-submenu.min.js" type="text/javascript"></script>
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -63,23 +65,32 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <?php foreach ($categories as $category) { ?>
-        <?php if ($category['children']) { ?>
-        <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
-          <div class="dropdown-menu">
-            <div class="dropdown-inner">
-              <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / 2)) as $children) { ?>
-              <ul class="list-unstyled">
-                <?php foreach ($children as $child) { ?>
-                <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
+          <?php if ($category['children']) { ?>
+            <li class="dropdown">
+              <a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">
+                <?php echo $category['name']; ?>
+              </a>
+              <ul class="dropdown-menu">
+                <?php foreach ($category['children'] as $child) { ?>
+                  <?php if ($child['children']) { ?>
+                    <li class="dropdown-submenu">
+                      <a href="<?php echo $child['href']; ?>">
+                        <?php echo $child['name']; ?>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <?php foreach ($child as $c) { ?>
+                          <li><a href="<?php echo $c['href']; ?>"><?php echo $c['name']; ?></a></li>
+                        <?php } ?>
+                      </ul>
+                  <?php } else { ?>
+                    <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
+                  <?php } ?>                 
                 <?php } ?>
               </ul>
-              <?php } ?>
-            </div>
-          </div>
-        </li>
-        <?php } else { ?>
-        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-        <?php } ?>
+            </li>
+          <?php } else { ?>
+            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+          <?php } ?>
         <?php } ?>
       </ul>
     </div>
