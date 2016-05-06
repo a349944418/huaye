@@ -239,11 +239,7 @@ div.required .control-label:before {
 	color: #ffffff;
 	background-color: #229ac8;
 }
-@media (min-width: 768px) {
-	#menu .dropdown:hover .dropdown-menu {
-		display: block;
-	}
-}
+
 @media (max-width: 767px) {
 	#menu {
 		border-radius: 4px;
