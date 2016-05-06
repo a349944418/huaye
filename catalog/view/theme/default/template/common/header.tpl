@@ -19,7 +19,7 @@
 <?php } ?>
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
 <link href="catalog/view/javascript/bootstrap-submenu.min.css" rel="stylesheet">
@@ -74,7 +74,7 @@
                 <?php foreach ($category['children'] as $child) { ?>
                   <?php if ($child['children']) { ?>
                     <li class="dropdown-submenu">
-                      <a href="<?php echo $child['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">
+                      <a href="<?php echo $child['href']; ?>" style="color:white">
                         <?php echo $child['name']; ?>
                       </a>
                       <ul class="dropdown-menu">
