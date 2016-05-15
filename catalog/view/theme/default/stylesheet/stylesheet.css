@@ -734,3 +734,5 @@ div#tab-description img {
     background-color: #df5c39;
 }
 
+.panel-body p img {max-width: 100%}
+
