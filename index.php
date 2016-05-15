@@ -9,11 +9,7 @@ if (is_file('config.php')) {
 	require_once('config.php');
 }
 
-// Install
-if (!defined('DIR_APPLICATION')) {
-	header('Location: install/index.php');
-	exit;
-}
+
 
 date_default_timezone_set('PRC');
 
